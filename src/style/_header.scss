@@ -1,0 +1,66 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+
+
+    &__left {
+        display: flex;
+        gap: 0 50px;
+
+        &-link {
+            color: $black-color;
+            font-size: 20px;
+            font-weight: 400;
+
+            &:hover {
+                border-bottom: 3px solid $black-color;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: 0 50px;
+
+        i {
+            font-size: 22px;
+        }
+    }
+
+    &__icon-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: relative;
+
+        &__left {
+            display: flex;
+            justify-content: end;
+            float: right;
+            position: absolute;
+            background-color: $white-color;
+            width: 100%;
+        }
+
+        &__logo {
+            height: 15px;
+        }
+
+        &__right {
+            display: none;
+        }
+
+        &__icon-mobile {
+            display: block;
+
+            &--toggle {
+                z-index: 1;
+            }
+        }
+    }
+}

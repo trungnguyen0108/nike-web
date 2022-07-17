@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../build/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Rubik:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 3,
+            slidesPerColumn: 1,
+            spaceBetween: 10,
+            // Navigation arrows
+
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+
+                769: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>NIKE</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="nav">
+            <div class="nav__icon-mobile nav__icon-mobile--toggle">
+                <i class=" fa-solid fa-bars-staggered"></i>
+            </div>
+            <ul class="nav__left" id="myTopnav">
+                <li>
+                    <a href="#" class="nav__left-link">WOMAN</a>
+                </li>
+                <li>
+                    <a href="#" class="nav__left-link">MEN</a>
+                </li>
+                <li>
+                    <a href="#" class="nav__left-link">ALL</a>
+                </li>
+            </ul>
+
+            <a href="#" class="logo">
+                <img srcset="../assets/img/logo.png 2x" alt="logo" class="nav__logo" />
+            </a>
+            <div class="nav__icon-mobile">
+                <i class="fa-solid fa-bag-shopping "></i>
+            </div>
+            <div class="nav__right">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    $(".nav").click(function () {
+                        $(".nav__left").slideToggle("slow");
+                    })
+                })
+            </script>
+        </header>
+
+        <!-- Home -->
+
+        <!-- Hero -->
+        <div class="hero">
+            <img src="../assets/img/hero-1-mobile.png" alt="" class="hero__img-mobile">
+            <div class="hero__content">
+                <h2 class="hero__title">WE ARE NEVER DONE</h2>
+                <h3 class="hero__subtitle">Celebrating 50 years of Nike from May 16th!
+                    <br>Exclusive products, experiences and much more await you for five days. Scan and join the Nike
+                    app!
+                </h3>
+                <button class="hero__btn">Celebrate with us</button>
+            </div>
+            <img src="../assets/img/hero2.jpg" alt="">
+        </div>
+
+        <!-- banner -->
+
+        <div class="banner__container">
+            <img srcset="../assets/img/banner.jpg 2x" alt="banner" class="banner__image">
+            <div class="banner__product">
+                <div class="product">
+                    <div class="product__content">
+                        <h2 class="product__text">NEW</h2>
+                        <h3 class="product__title">AIR JORDAN 1 MID <br>LIGHT SMOKE GREY</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="product__image">
+                        <img srcset="../assets/img/nike-air-max-270.png 2x" alt="air-jordan-1-mid-light-smoke-grey">
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product__content">
+                        <h2 class="product__text">NEW</h2>
+                        <h3 class="product__title">Air Max 200 SE</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="product__image">
+                        <img srcset="../assets/img/air-max-200.png 2x" alt="air-jordan-1-mid-light-smoke-grey">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- feature -->
+        <div class="container">
+            <div class="feature">
+                <h5 class="feature__subtitle">At the moments</h5>
+                <h2 class="feature__title">SUMMERTIME MOOD</h2>
+                <h5 class="feature__subtitle-bottom">Fight the heat in a sunny look!</h5>
+            </div>
+
+            <!-- slider -->
+
+            <div class="slider swiper">
+                <div class="slider__head">
+                    <h2 class="slider__head-title">Top sneakers</h2>
+                    <div class="slider__btn">
+                        <i class="fa-solid fa-arrow-left swiper-button-prev"></i>
+                        <i class="fa-solid fa-arrow-right swiper-button-next"></i>
+                    </div>
+                </div>
+
+                <div class="slider__product-container swiper-wrapper">
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/ari-max-97.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">Air Max 97</h2>
+                        <p class="slider__product-price">1</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/react-presto.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">React Presto</h2>
+                        <p class="slider__product-price">2</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/kd13-ep.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">KD13 EP</h2>
+                        <p class="slider__product-price">3</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/ari-max-97.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">Air Max 97</h2>
+                        <p class="slider__product-price">4</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/react-presto.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">React Presto</h2>
+                        <p class="slider__product-price">5</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="slider__product swiper-slide">
+                        <h1 class="slider__text-watermark">NIKE</h1>
+                        <img srcset="../assets/img/kd13-ep.png 2x" alt="ari-max-97">
+                        <h2 class="slider__product-title">KD13 EP</h2>
+                        <p class="slider__product-price">6</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <!-- category -->
+
+            <div class="category">
+
+                <h2 class="category__head">Buy by category</h2>
+
+                <div class="category__item">
+                    <h2 class="category__title">WORKOUT</h2>
+                    <img srcset="../assets/img/category-workout.png 2x" alt="workout" class="category__simg">
+                </div>
+
+                <div class="category__item">
+                    <h2 class="category__title category__title-mobile">RUN</h2>
+                    <img srcset="../assets/img/category-run.png 2x" alt="run" class="category__img">
+                    <h2 class="category__title category__title-web">RUN</h2>
+                </div>
+
+                <div class=" category__item">
+                    <h2 class="category__title">FOOTBALL</h2>
+                    <img srcset="../assets/img/category-football.png 2x" alt="workout" class="category__img">
+                </div>
+            </div>
+
+            <!-- voucher -->
+
+            <div class="voucher">
+
+                <h2 class="voucher__head">LOOKS GOOD. <span> RUNS GOOD. </span>FEELS GOOD</h2>
+
+
+                <div class="voucher__item">
+                    <div class="voucher__item-container">
+                        <div class="voucher__item-content">
+                            <h2 class="voucher__item-title"><span>-20% </span>Discount</h2>
+                            <p class="voucher__item-subtitle">on your first purchase</p>
+                            <button class="voucher__item-btn">Shop now</button>
+                        </div>
+                        <img srcset="../assets/img/voucher-product-1.png 2x" alt="voucher-image"
+                            class="voucher__item-img">
+                    </div>
+
+                    <div class="voucher__item-container">
+                        <div class="voucher__item-content">
+                            <h2 class="voucher__item-title"><span>-20% </span>Discount</h2>
+                            <p class="voucher__item-subtitle">on your first purchase</p>
+                            <button class="voucher__item-btn">Shop now</button>
+                        </div>
+                        <img srcset="../assets/img/voucher-product-2.png 2x" alt="voucher-image"
+                            class="voucher__item-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- More product -->
+
+        <div class="more__product">
+            <h2 class="more__product-head">More Nike products</h2>
+            <div class="more__product-content">
+                <h2 class="more__product-title">YOUR NIKE <br> MEMBERSHIP</h2>
+                <p class="more__product-subtitle">Join our members and show your love with<br> <b>Nike By You!</b></p>
+                <button class="more__product-btn">Join us</button>
+            </div>
+        </div>
+
+        <!-- form -->
+
+        <div class="form__contact">
+
+            <h2 class="form__contact-head">Contact</h2>
+            <form action="" method="POST" class="form" id="form-1">
+                <div class="form__group">
+                    <label for="fullname" class="form__label">Name:</label>
+                    <input id="fullname" name="fullname" type="text" placeholder="E.g. Ronaldo" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form__group">
+                    <label for="email" class="form__label">Email:</label>
+                    <input id="email" name="email" type="text" placeholder="E.g. email@domain.com" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form__group">
+                    <label for="message" class="form__label">Message:</label>
+                    <textarea id="message" name="message" placeholder="E.g. Message" type="textarea"
+                        class="form-control"></textarea>
+                    <span class="form-message"></span>
+                </div>
+
+                <button class="form-submit">Send</button>
+            </form>
+        </div>
+        <script src="../src/validator.js"></script>
+        <script>
+            Validator({
+                form: "#form-1",
+                formGroupSelector: ".form__group",
+                errorSelector: ".form-message",
+                rules: [
+                    Validator.isRequired("#fullname"),
+                    Validator.isRequired("#email"),
+                    Validator.isEmail("#email"),
+                    Validator.isRequired("#message"),
+                ],
+                onSubmit: function (data) {
+                    console.log(data)
+                }
+            })
+        </script>
+
+
+        <!-- footer -->
+
+        <footer class="footer">
+            <div class="footer__category-list">
+                <ul>
+                    <li>
+                        <a href="#">WOMAN</a>
+                    </li>
+                    <li>
+                        <a href="#">MEN</a>
+                    </li>
+                    <li>
+                        <a href="#">ALL</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__logo">
+                <img srcset="../assets/img/footer-logo.png 2x" alt="">
+            </div>
+            <div class="footer__category-list">
+                <ul>
+                    <li>
+                        <a href="#">WORKOUT</a>
+                    </li>
+                    <li>
+                        <a href="#">RUN</a>
+                    </li>
+                    <li>
+                        <a href="#">FOOTBALL</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

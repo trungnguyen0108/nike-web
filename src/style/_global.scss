@@ -1,0 +1,44 @@
+body {
+    font-family: $font;
+    font-weight: 700;
+    color: $black-color;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: $font;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 50px;
+}
+
+@mixin btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+@mixin icon {
+    padding: 16px;
+    border-radius: 50%;
+    background-color: $white-color;
+
+    &:hover {
+        color: $white-color;
+        background-color: $black-color;
+    }
+}
+
+
+.wrapper {
+    margin: 0 auto;
+}

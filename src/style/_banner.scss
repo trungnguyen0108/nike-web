@@ -1,0 +1,59 @@
+.banner__product {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px 0px;
+    margin-bottom: 100px;
+
+
+    .product {
+        display: flex;
+        position: relative;
+        max-width: 50%;
+        width: 45%;
+        height: 270px;
+        background-color: $gray-color;
+        border-radius: 20px;
+        transform: translateY(-40px);
+        box-shadow: 5px 20px 20px rgba(171, 157, 157, 0.5);
+
+        &__content {
+            margin-left: 10%;
+
+            i {
+                @include icon;
+                margin-top: 30px;
+                margin-left: 30px;
+                transform: rotate(-30deg);
+            }
+        }
+
+        &__text {
+            color: $new-color;
+            font-style: italic;
+            font-size: 48px;
+            margin-bottom: 10px;
+            margin-top: 60px;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        &__image {
+            transform: translate(20%, -20%);
+            position: absolute;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .product {
+            max-width: 80%;
+            width: 500px;
+
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.more__product {
+    margin-bottom: 100px;
+
+    &-head {
+        font-size: 40px;
+        margin: 0 0 30px 50px;
+
+    }
+
+    &-content {
+        background: url('../assets/img/more-product.png') top center / cover no-repeat;
+        padding: 44px 0 44px 50px;
+    }
+
+    &-title {
+        color: $white-color;
+        line-height: 50px;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    &-subtitle {
+        color: $white-color;
+        line-height: 25px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+
+    &-btn {
+        @include btn
+    }
+}

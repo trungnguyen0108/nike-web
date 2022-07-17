@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0;
+
+    &__contact-head {
+        font-size: 40px;
+        margin: 0 0 50px 50px;
+    }
+
+    &-submit {
+        @include btn;
+        margin-bottom: 50px;
+
+        &:hover {
+            background-color: $black-color;
+            color: $white-color;
+        }
+    }
+}

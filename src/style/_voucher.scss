@@ -1,0 +1,84 @@
+.voucher {
+    margin-bottom: 100px;
+
+
+    &__head {
+        font-weight: 900;
+        font-style: italic;
+        font-style: 40px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        gap: 0px 40px;
+        flex-wrap: wrap;
+        gap: 50px 0;
+
+        &-container {
+            display: flex;
+            position: relative;
+            background-color: $gray-color;
+            max-width: 100%;
+            width: 500px;
+            height: 272px;
+            border-radius: 20px;
+            box-shadow: 5px 20px 20px rgba(171, 157, 157, 0.5);
+        }
+
+        &-content {
+            margin-left: 48px;
+        }
+
+        &-title {
+            margin-top: 50px;
+            margin-bottom: 25px;
+            color: $new-color;
+            font-size: 24px;
+
+            span {
+                font-size: 30px;
+            }
+        }
+
+        &-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 30px
+        }
+
+        &-btn {
+            @include btn;
+            color: $white-color;
+            font-weight: 400;
+            background-color: $black-color;
+        }
+
+        &-img {
+            position: absolute;
+            transform: translate(25%, -20%);
+        }
+    }
+
+    @media (max-width: 740px) {
+        .voucher {
+            &__item {
+                max-width: 100%;
+
+                &-container {
+                    margin-bottom: 50px;
+                }
+
+                &-subtitle {
+                    margin-bottom: 20px;
+                }
+
+                &-img {
+                    transform: translate(30%, -20%);
+                }
+            }
+        }
+    }
+}

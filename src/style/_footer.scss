@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: $black-color;
+    line-height: 70px;
+    padding: 30px 0;
+
+    &__category-list {
+        a {
+            color: $white-color;
+        }
+    }
+}
