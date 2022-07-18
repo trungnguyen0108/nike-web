@@ -16,11 +16,25 @@ function Validator(options) {
     let formElement = document.querySelector(options.form)
 
     if (formElement) {
+        formElement.onsubmit = function (e) {
+            e.preventDefault()
+
+            options.rules.forEach(function (rule) {
+                let inputElement = formElement.querySelector(rule.selector)
+                validate(inputElement, rule)
+            })
+        }
+
         options.rules.forEach((rule) => {
             let inputElement = formElement.querySelector(rule.selector)
             if (inputElement) {
                 inputElement.onblur = function () {
                     validate(inputElement, rule)
+                }
+
+                inputElement.oninput = function () {
+                    let errorElement = inputElement.parentElement.querySelector(".form-message")
+                    errorElement.innerText = ""
                 }
             }
         })
@@ -31,7 +45,7 @@ Validator.isRequired = function (selector) {
     return {
         selector: selector,
         test: function (value) {
-            return value ? undefined : "Vui lòng nhập trường này"
+            return value ? undefined : "This field is required."
         }
     }
 }
@@ -41,7 +55,7 @@ Validator.isEmail = function (selector) {
         selector: selector,
         test: function (value) {
             let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-            return regex.test(value) ? undefined : "Email không hợp lệ"
+            return regex.test(value) ? undefined : "Invalid email."
         }
     }
 }
