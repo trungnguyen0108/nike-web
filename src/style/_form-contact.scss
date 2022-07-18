@@ -4,6 +4,31 @@
     justify-content: center;
     align-items: center;
     gap: 30px 0;
+    margin-bottom: 50px;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+
+        input {
+            padding: 10px 10px;
+        }
+
+        span {
+            color: red;
+            font-size: 12px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+        }
+    }
 
     &__contact-head {
         font-size: 40px;
@@ -12,11 +37,13 @@
 
     &-submit {
         @include btn;
-        margin-bottom: 50px;
+        background-color: $black-color;
+        color: white;
+        margin-bottom: 10px;
 
         &:hover {
-            background-color: $black-color;
-            color: $white-color;
+            background-color: $gray-color;
+            color: $black-color;
         }
     }
 }
